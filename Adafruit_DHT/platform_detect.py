@@ -110,5 +110,9 @@ def pi_version():
         # Pi 3b+
         return 3
     else:
+    # Adding the following elif to accommodate RPi4B Broadcomchip
+    elif match.group(1) == 'BCM2711':
+    # Pi 4B
+    return 3
         # Something else, not a pi.
         return None
